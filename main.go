@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	data, err := os.ReadFile("filestobackup.json")
+	data, err := os.ReadFile("backup.json")
 	if err != nil {
 		fmt.Println("Could not read JSON file:", err)
 		return
