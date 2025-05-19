@@ -5,6 +5,10 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+<<<<<<< HEAD
+=======
+	"time"
+>>>>>>> e527404 (updating)
 
 	"github.com/otiai10/copy"
 )
@@ -26,9 +30,11 @@ func main() {
 		return
 	}
 	fmt.Println(backupData)
+	now := time.Now().Format("2006-01-02 15:04:05")
+	dst := backupData.Destination + "/" + now
 
 	for _, file := range backupData.Files {
-		destPath := filepath.Join(backupData.Destination, file)
+		destPath := filepath.Join(dst, file)
 		if err := copy.Copy(file, destPath); err != nil {
 			fmt.Printf("Error backing up %s: %v\n", file, err)
 		}
