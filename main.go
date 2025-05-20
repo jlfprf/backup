@@ -29,11 +29,8 @@ func main() {
 	fmt.Println(backupData)
 	now := time.Now().Format("2006-01-02 15:04:05")
 	dst := backupData.Destination + "/" + now
-	now := time.Now().Format("2006-01-02 15:04:05")
-	dst := backupData.Destination + "/" + now
 
 	for _, file := range backupData.Files {
-		destPath := filepath.Join(dst, file)
 		destPath := filepath.Join(dst, file)
 		if err := copy.Copy(file, destPath); err != nil {
 			fmt.Printf("Error backing up %s: %v\n", file, err)

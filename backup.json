@@ -1,7 +1,9 @@
 {
   "filestobackup":[
     "/home/jlf/bin",
-    "/home/jlf/programming"
+    "/home/jlf/programming",
+    "/home/jlf/.config/helix",
+    "/home/jlf/.config/fish"
   ],
-  "destination":"/home/jlf/Dropbox/backup"
+  "destination":"/media/jlf/jlf-ntf/backup"
 }
